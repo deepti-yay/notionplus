@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notion+ | Smart Workspace</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background decoration -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <div class="app">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span>✦</span> Notion+
+            </div>
+
+            <div class="workspace">
+                MY WORKSPACE
+            </div>
+
+            <nav>
+
+                <button class="nav-item active" data-page="home">
+                    <span>⌂</span> Home
+                </button>
+
+                <button class="nav-item" data-page="notes">
+                    <span>📝</span> Notes
+                </button>
+
+                <button class="nav-item" data-page="tasks">
+                    <span>✓</span> Tasks
+                </button>
+
+                <button class="nav-item" data-page="calendar">
+                    <span>▣</span> Calendar
+                </button>
+
+                <button class="nav-item" data-page="favorites">
+                    <span>☆</span> Favorites
+                </button>
+
+                <button class="nav-item" id="pickerButton">
+                    <span>🎡</span> Decision Picker
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <button class="nav-item" id="settingsButton">
+                    <span>⚙</span> Settings
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main">
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <p class="small-text">
+                        MY WORKSPACE
+                    </p>
+
+                    <h1 id="cursorTitle">
+                        Good afternoon 👋
+                    </h1>
+
+                    <p class="subtitle">
+                        What are you working on today?
+                    </p>
+
+                </div>
+
+
+                <div class="top-actions">
+
+                    <button class="icon-button" id="searchButton">
+                        🔍
+                    </button>
+
+                    <button class="icon-button">
+                        🔔
+                    </button>
+
+                    <button class="new-page" id="newPageButton">
+                        + New Page
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= HOME PAGE ================= -->
+
+            <section id="home" class="page active-page">
+
+                <div class="dashboard">
+
+                    <!-- NOTES -->
+
+                    <div class="glass-card">
+
+                        <div class="card-top">
+
+                            <div class="card-icon">
+                                📝
+                            </div>
+
+                            <span class="card-label">
+                                NOTES
+                            </span>
+
+                        </div>
+
+                        <h2>Quick Notes</h2>
+
+                        <p>
+                            Capture your thoughts and ideas.
+                        </p>
+
+                        <button class="card-button" id="openNotes">
+                            Open Notes →
+                        </button>
+
+                    </div>
+
+
+                    <!-- TASKS -->
+
+                    <div class="glass-card">
+
+                        <div class="card-top">
+
+                            <div class="card-icon">
+                                ✓
+                            </div>
+
+                            <span class="card-label">
+                                PRODUCTIVITY
+                            </span>
+
+                        </div>
+
+                        <h2>Tasks</h2>
+
+                        <p id="taskSummary">
+                            0 tasks remaining
+                        </p>
+
+                        <button class="card-button" id="openTasks">
+                            View Tasks →
+                        </button>
+
+                    </div>
+
+
+                    <!-- DECISION PICKER -->
+
+                    <div class="glass-card picker-preview">
+
+                        <div class="card-top">
+
+                            <div class="card-icon">
+                                🎡
+                            </div>
+
+                            <span class="card-label">
+                                RANDOMIZER
+                            </span>
+
+                        </div>
+
+                        <h2>Decision Picker</h2>
+
+                        <p>
+                            Can't decide? Let the wheel choose.
+                        </p>
+
+                        <button class="card-button" id="openPicker">
+                            Spin the Wheel →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RECENT PAGES -->
+
+                <section class="recent-section">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>Recent Pages</h2>
+
+                            <p>
+                                Continue where you left off.
+                            </p>
+
+                        </div>
+
+                        <button class="view-all">
+                            View all →
+                        </button>
+
+                    </div>
+
+
+                    <div class="pages-grid">
+
+                        <div class="page-card">
+
+                            <div class="page-icon">
+                                📚
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    My Study Notes
+                                </h3>
+
+                                <p>
+                                    Updated recently
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="page-card">
+
+                            <div class="page-icon">
+                                💡
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Project Ideas
+                                </h3>
+
+                                <p>
+                                    Updated yesterday
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="page-card">
+
+                            <div class="page-icon">
+                                🚀
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Hackathon Project
+                                </h3>
+
+                                <p>
+                                    Updated 2 days ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- AI -->
+
+                <section class="ai-card">
+
+                    <div class="ai-icon">
+                        ✨
+                    </div>
+
+                    <div class="ai-content">
+
+                        <h2>AI Assistant</h2>
+
+                        <p>
+                            Summarize notes, plan tasks and generate ideas
+                            with your personal AI assistant.
+                        </p>
+
+                    </div>
+
+                    <button class="ai-button" id="aiButton">
+                        Ask AI →
+                    </button>
+
+                </section>
+
+            </section>
+
+
+            <!-- ================= NOTES PAGE ================= -->
+
+            <section id="notes" class="page">
+
+                <div class="page-heading">
+
+                    <p class="small-text">WORKSPACE</p>
+
+                    <h1>📝 Notes</h1>
+
+                    <p>
+                        Write down anything you don't want to forget.
+                    </p>
+
+                </div>
+
+                <div class="editor glass-card">
+
+                    <input
+                        type="text"
+                        id="noteTitle"
+                        placeholder="Untitled note..."
+                    >
+
+                    <textarea
+                        id="noteText"
+                        placeholder="Start writing..."
+                    ></textarea>
+
+                    <button class="save-button" id="saveNote">
+                        Save Note
+                    </button>
+
+                    <p id="noteStatus"></p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= TASKS PAGE ================= -->
+
+            <section id="tasks" class="page">
+
+                <div class="page-heading">
+
+                    <p class="small-text">PRODUCTIVITY</p>
+
+                    <h1>✅ Tasks</h1>
+
+                    <p>
+                        Organize what needs to get done.
+                    </p>
+
+                </div>
+
+
+                <div class="task-input glass-card">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Add a new task..."
+                    >
+
+                    <button id="addTask">
+                        + Add Task
+                    </button>
+
+                </div>
+
+
+                <div id="taskList"></div>
+
+            </section>
+
+
+            <!-- ================= CALENDAR ================= -->
+
+            <section id="calendar" class="page">
+
+                <div class="page-heading">
+
+                    <p class="small-text">PLANNER</p>
+
+                    <h1>📅 Calendar</h1>
+
+                    <p>
+                        Keep track of your schedule.
+                    </p>
+
+                </div>
+
+
+                <div class="calendar glass-card">
+
+                    <div class="calendar-header">
+
+                        <button id="previousMonth">
+                            ←
+                        </button>
+
+                        <h2 id="monthTitle"></h2>
+
+                        <button id="nextMonth">
+                            →
+                        </button>
+
+                    </div>
+
+                    <div class="calendar-days">
+
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+
+                    </div>
+
+                    <div id="calendarGrid" class="calendar-grid"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= FAVORITES ================= -->
+
+            <section id="favorites" class="page">
+
+                <div class="page-heading">
+
+                    <p class="small-text">SAVED</p>
+
+                    <h1>⭐ Favorites</h1>
+
+                    <p>
+                        Your favorite pages appear here.
+                    </p>
+
+                </div>
+
+                <div class="glass-card empty-state">
+
+                    <div>
+                        ⭐
+                    </div>
+
+                    <h2>No favorites yet</h2>
+
+                    <p>
+                        Favorite a page to see it here.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= DECISION PICKER MODAL ================= -->
+
+    <div class="modal-overlay" id="pickerModal">
+
+        <div class="picker-modal glass-modal">
+
+            <button class="close-button" id="closePicker">
+                ×
+            </button>
+
+            <div class="picker-title">
+
+                <p class="small-text">
+                    RANDOM DECISION
+                </p>
+
+                <h1>What should I choose?</h1>
+
+                <p>
+                    Enter your choices and let the wheel decide.
+                </p>
+
+            </div>
+
+
+            <div class="picker-content">
+
+                <!-- Wheel -->
+
+                <div class="wheel-container">
+
+                    <div class="wheel-pointer">
+                        ▼
+                    </div>
+
+                    <canvas
+                        id="wheel"
+                        width="420"
+                        height="420">
+                    </canvas>
+
+                </div>
+
+
+                <!-- Controls -->
+
+                <div class="picker-controls">
+
+                    <h3>
+                        Your choices
+                    </h3>
+
+                    <div id="choiceInputs">
+
+                        <div class="choice-row">
+
+                            <input
+                                type="text"
+                                value="Study"
+                                class="choice-input"
+                            >
+
+                            <button class="delete-choice">
+                                ×
+                            </button>
+
+                        </div>
+
+                        <div class="choice-row">
+
+                            <input
+                                type="text"
+                                value="Watch a movie"
+                                class="choice-input"
+                            >
+
+                            <button class="delete-choice">
+                                ×
+                            </button>
+
+                        </div>
+
+                        <div class="choice-row">
+
+                            <input
+                                type="text"
+                                value="Go outside"
+                                class="choice-input"
+                            >
+
+                            <button class="delete-choice">
+                                ×
+                            </button>
+
+                        </div>
+
+                        <div class="choice-row">
+
+                            <input
+                                type="text"
+                                value="Work on project"
+                                class="choice-input"
+                            >
+
+                            <button class="delete-choice">
+                                ×
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="add-choice" id="addChoice">
+                        + Add Choice
+                    </button>
+
+                    <button class="spin-button" id="spinWheel">
+                        🎡 SPIN THE WHEEL
+                    </button>
+
+                    <div class="result" id="pickerResult">
+                        Ready to spin...
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SEARCH MODAL -->
+
+    <div class="modal-overlay" id="searchModal">
+
+        <div class="search-modal glass-modal">
+
+            <button class="close-button" id="closeSearch">
+                ×
+            </button>
+
+            <h2>Search your workspace</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search pages..."
+            >
+
+            <div id="searchResults"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- AI MODAL -->
+
+    <div class="modal-overlay" id="aiModal">
+
+        <div class="ai-modal glass-modal">
+
+            <button class="close-button" id="closeAI">
+                ×
+            </button>
+
+            <div class="ai-big-icon">
+                ✨
+            </div>
+
+            <h1>Notion+ AI</h1>
+
+            <p>
+                Hi! I'm your workspace assistant.
+            </p>
+
+            <div class="ai-options">
+
+                <button>
+                    ✨ Summarize my notes
+                </button>
+
+                <button>
+                    🧠 Give me project ideas
+                </button>
+
+                <button>
+                    📋 Help me plan my day
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
